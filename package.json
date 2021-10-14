@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "filter": "^0.1.1",
+    "json-server": "^0.17.0",
     "lodash": "^4.17.11",
     "npm": "^7.24.1",
     "nprogress": "^0.2.0",

@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="nav">
     <router-link to="/" class="brand">Some users</router-link>
-    <!-- <input v-model="search" placeholder="Search" /> -->
+    <input v-model="search" placeholder="Search" />
     <nav>
       <router-link to="/" tag="button" class="nav-item"
         ><BaseIcon name="list"></BaseIcon
@@ -20,8 +20,13 @@ export default {
   components: { BaseIcon },
   data() {
     return {
-      user: [],
+      search: '',
     }
+  },
+  watch: {
+    search() {
+      this.$store.dispatch('search', this.search)
+    },
   },
 }
 </script>

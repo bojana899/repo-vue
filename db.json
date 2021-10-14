@@ -1,4 +1,5 @@
-[
+{
+  "users": [
     {
       "id": 54928101,
       "user": {
@@ -88,3 +89,4 @@
       "picture": "https://picsum.photos/id/227/100/50?grayscale"
     }
   ]
+}
