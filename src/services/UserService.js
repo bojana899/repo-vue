@@ -12,7 +12,8 @@ const apiClient = axios.create({
 
 export default {
   getUsers(perPage, page) {
-    return apiClient.get('/users?_limit=' + perPage + '&_page=' + page)
+    //return apiClient.get('/users?_limit=' + perPage + '&_page=' + page)
+    return apiClient.post('/users', { "perPage": perPage, "page": page })
   },
   getUser(id) {
     return apiClient.get('/users/' + id)
