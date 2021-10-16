@@ -53,6 +53,9 @@ export const actions = {
         return response.data
       })
     }
+  },
+  search({ commit }, search) {
+    commit('SET_SEARCH', search)
   }
 }
 export const getters = {
@@ -60,6 +63,8 @@ export const getters = {
     return state.users.find(user => user.id === id)
   },
   getUserBySearch: state => {
-    return state.users.filter(user => user.name.toLowerCase().indexOf(state.search.toLowerCase()) > -1)
+    return state.users.filter(user => {
+      return user.title.toLowerCase().indexOf(state.search.toLowerCase()) > -1
+    })
   }
 }

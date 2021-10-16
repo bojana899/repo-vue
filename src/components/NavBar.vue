@@ -25,7 +25,7 @@ export default {
   },
   watch: {
     search() {
-      this.$store.dispatch('search', this.search)
+      this.$store.dispatch('user/search', this.search)
     },
   },
 }

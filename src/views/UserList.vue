@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UserCard v-for="user in user.users" :key="user.id" :user="user" />
+    <UserCard v-for="user in getUserBySearch" :key="user.id" :user="user" />
 
     <template v-if="page != 1">
       <router-link
@@ -23,7 +23,7 @@
 
 <script>
 import UserCard from '@/components/UserCard.vue'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import store from '@/store/store'
 
 function getPageUsers(routeTo, next) {
@@ -67,6 +67,7 @@ export default {
       return this.user.usersTotal > this.page * this.user.perPage
     },
     ...mapState(['user', 'users']),
+    ...mapGetters('user', ['getUserBySearch']),
   },
 }
 </script>
