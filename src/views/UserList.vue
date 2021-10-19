@@ -1,5 +1,12 @@
 <template>
   <div>
+    <div class="pad">
+      <label class="filter-label">Order By: </label>
+      <select v-model="orderBy">
+        <option value="username">Username</option>
+        <option value="location">Location</option>
+      </select>
+    </div>
     <UserCard v-for="user in getUserBySearch" :key="user.id" :user="user" />
 
     <template v-if="page != 1">
@@ -62,14 +69,36 @@ export default {
     search() {
       return this.$store.getters.getUserBySearch
     },
+    orderBy: {
+      set(orderBy) {
+        this.$store.dispatch('user/updateOrderBy', orderBy)
+      },
+
+      get() {
+        return this.$store.getters.getOrderBy
+      },
+      orderDirection() {
+        return this.$store.getters.getOrderDirection
+      },
+    },
 
     hasNextPage() {
       return this.user.usersTotal > this.page * this.user.perPage
     },
     ...mapState(['user', 'users']),
-    ...mapGetters('user', ['getUserBySearch']),
+    ...mapGetters(
+      'user',
+      ['getUserBySearch'],
+      ['getOrderBy'],
+      ['getOrderDirection']
+    ),
   },
 }
 </script>
 
 
+<style scoped>
+.pad {
+  padding-block: 20px;
+}
+</style>

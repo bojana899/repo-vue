@@ -1,9 +1,16 @@
 <template>
   <div>
+    <div id="pad">
+      <label class="filter-label">Order By: </label>
+      <select v-model="orderBy">
+        <option value="username">Username</option>
+        <option value="location">Location</option>
+      </select>
+    </div>
     <div class="grid">
       <UserCard
-        class="cell"
-        v-for="user in user.users"
+        class="size"
+        v-for="user in getUserBySearch"
         :key="user.id"
         :user="user"
       />
@@ -29,7 +36,7 @@
 
 <script>
 import UserCard from '@/components/UserCard.vue'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import store from '@/store/store'
 
 function getPageUsers(routeTo, next) {
@@ -65,23 +72,53 @@ export default {
     getPageUsers(routeTo, next)
   },
   computed: {
+    search() {
+      return this.$store.getters.getUserBySearch
+    },
+    orderBy: {
+      set(orderBy) {
+        this.$store.dispatch('user/updateOrderBy', orderBy)
+      },
+
+      get() {
+        return this.$store.getters.getOrderBy
+      },
+      orderDirection() {
+        return this.$store.getters.getOrderDirection
+      },
+    },
+
     hasNextPage() {
       return this.user.usersTotal > this.page * this.user.perPage
     },
     ...mapState(['user', 'users']),
+    ...mapGetters(
+      'user',
+      ['getUserBySearch'],
+      ['getOrderBy'],
+      ['getOrderDirection']
+    ),
   },
 }
 </script>
 
 <style scoped>
+#pad {
+  padding-block: 20px;
+}
+
+.size {
+  max-width: 250px;
+  min-width: 250px;
+}
 .grid {
-  display: flex; /* establish flex container */
-  flex-wrap: wrap; /* enable flex items to wrap */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .cell {
-  flex: 0 0 32%; /* don't grow, don't shrink, width */
-  height: 250px;
+  flex: 0 0 32%;
+  max-height: 250px;
   margin-bottom: 5px;
 }
 </style>

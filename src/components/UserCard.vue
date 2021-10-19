@@ -4,7 +4,7 @@
     :to="{ name: 'user-show', params: { id: user.id } }"
   >
     <div class="user-card -shadow">
-      <h4 class="title">{{ user.title }}</h4>
+      <h4 class="title">Username:{{ user.username }}</h4>
       <br />
       <img :src="user.picture" /><br />
       <BaseIcon name="users">{{ user.location }} location</BaseIcon>

@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="nav">
-    <router-link to="/" class="brand">Some users</router-link>
-    <input v-model="search" placeholder="Search" />
+    <router-link to="/" class="brand">HOME</router-link>
+    <input v-model="search" placeholder="Search by username:" />
     <nav>
       <router-link to="/" tag="button" class="nav-item"
         ><BaseIcon name="list"></BaseIcon

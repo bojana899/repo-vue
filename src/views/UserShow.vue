@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="user-header">
-      <h4 class="title">User details for:{{ user.title }}</h4>
+      <h4 class="title">Username:{{ user.username }}</h4>
     </div>
 
-    <h5>User details:</h5>
+    <h4>DETAILS:</h4>
+    <hr />
     <h6>User ID: {{ user.id }}</h6>
     <h6>User name: {{ user.user.name }}</h6>
+    <h6>User email: {{ user.email }}</h6>
     <img :src="user.picture" />
     <div>
       <BaseIcon name="map"> <h4>Location</h4> </BaseIcon><br />

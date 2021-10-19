@@ -6,8 +6,9 @@
         "id": "abc",
         "name": "Adam"
       },
-      "username": "nekoja",
+      "username": "Leopoldo_Corkery",
       "title": "Cat Cabaret",
+      "email": "Nathan@yesenia.net",
       "location": "Meow Town",
       "picture": "https://picsum.photos/id/237/100/50?grayscale"
     },
@@ -17,8 +18,9 @@
         "id": "abc123",
         "name": "Bojsns"
       },
-      "username": "nekojaadas",
+      "username": "Elwyn.Skiles",
       "title": "Kitty Cluster",
+      "email": "Nathan@yesenia.net",
       "location": "Catlandia",
       "picture": "https://picsum.photos/id/257/100/50?grayscale"
     },
@@ -30,6 +32,7 @@
       },
       "username": "nekadadoja",
       "title": "Kitty Cluster",
+      "email": "Nathan@yesenia.net",
       "location": "Puptown ",
       "picture": "https://picsum.photos/id/267/100/50?grayscale"
     },
@@ -37,10 +40,11 @@
       "id": 59268101,
       "user": {
         "id": "abc",
-        "name": "Adam"
+        "name": "Ceca"
       },
-      "username": "nekovvja",
+      "username": "Maxime_Nienow",
       "title": "Dog Cabaret",
+      "email": "Nathan@yesenia.net",
       "location": "Meow Town",
       "picture": "https://picsum.photos/id/237/100/50?grayscale"
     },
@@ -50,8 +54,9 @@
         "id": "12",
         "name": "Nina"
       },
-      "username": "nekscfscsoja",
+      "username": "Delphine",
       "title": "Cat Cabaret",
+      "email": "Nathan@yesenia.net",
       "location": "Meow Town",
       "picture": "https://picsum.photos/id/238/100/50?grayscale"
     },
@@ -61,8 +66,9 @@
         "id": "12333",
         "name": "Maja"
       },
-      "username": "bojana",
+      "username": "Moriah.Stanton",
       "title": " Tree autmun",
+      "email": "Nathan@yesenia.net",
       "location": "Meow Town",
       "picture": "https://picsum.photos/id/239/100/50?grayscale"
     },
@@ -72,9 +78,10 @@
         "id": "5555",
         "name": "dora"
       },
-      "username": "miki",
+      "username": "Samantha",
       "title": "Cat Cabaret",
-      "location": "Meow Town",
+      "email": "Nathan@yesenia.net",
+      "location": "Skopje",
       "picture": "https://picsum.photos/id/227/100/50?grayscale"
     },
     {
@@ -83,8 +90,9 @@
         "id": "666",
         "name": "David"
       },
-      "username": "nekoja",
+      "username": "Dzordz",
       "title": "Love and Hope",
+      "email": "Nathan@yesenia.net",
       "location": "Meow Town",
       "picture": "https://picsum.photos/id/227/100/50?grayscale"
     }
