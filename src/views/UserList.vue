@@ -39,7 +39,7 @@ function getPageUsers(routeTo, next) {
     .dispatch(
       'user/fetchUsers',
       {
-        page: currentPage,
+        page: currentPage
       },
       { root: true }
     )
@@ -53,11 +53,11 @@ export default {
   props: {
     page: {
       type: Number,
-      required: true,
-    },
+      required: true
+    }
   },
   components: {
-    UserCard,
+    UserCard
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
     getPageUsers(routeTo, next)
@@ -79,7 +79,7 @@ export default {
       },
       orderDirection() {
         return this.$store.getters.getOrderDirection
-      },
+      }
     },
 
     hasNextPage() {
@@ -91,8 +91,8 @@ export default {
       ['getUserBySearch'],
       ['getOrderBy'],
       ['getOrderDirection']
-    ),
-  },
+    )
+  }
 }
 </script>
 

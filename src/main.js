@@ -6,16 +6,9 @@ import router from './router'
 import store from './store/store'
 import 'nprogress/nprogress.css'
 
-
 import axios from 'axios'
 
-
-
-window.axios = axios;
-
-
-
-
+window.axios = axios
 
 Vue.config.productionTip = false
 

@@ -26,7 +26,6 @@ const router = new Router({
       props: true
     },
 
-
     {
       path: '/user/:id',
       name: 'user-show',

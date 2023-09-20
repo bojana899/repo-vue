@@ -14,13 +14,13 @@ export default {
     name: String,
     width: {
       type: [Number, String],
-      default: 14,
+      default: 14
     },
     height: {
       type: [Number, String],
-      default: 14,
-    },
-  },
+      default: 14
+    }
+  }
 }
 </script>
     

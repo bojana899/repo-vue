@@ -20,14 +20,14 @@ export default {
   components: { BaseIcon },
   data() {
     return {
-      search: '',
+      search: ''
     }
   },
   watch: {
     search() {
       this.$store.dispatch('user/search', this.search)
-    },
-  },
+    }
+  }
 }
 </script>
 
